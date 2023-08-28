@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Module 03 Assignment</title>
+</head>
+<body>
+  <script>
+    // Loop that counts from 0 to 10
+    document.write("<u>Loop that counts from 0 to 10 stating whether count is even or odd:</u><br>");
+    for (let i = 0; i <= 10; i++) {
+      if (i % 2 === 0) {
+        document.write(`Count ${i} is even<br>`);
+      } else {
+        document.write(`Count ${i} is odd<br>`);
+      }
+    }
+    document.write("<br>");
+
+    // Loop Counter
+    let myNum;
+    do { // Ask user for a number between 5 and 20
+      myNum = parseInt(prompt("Enter a number between 5 and 20:"));
+    } while (isNaN(myNum) || myNum < 5 || myNum > 20);
+
+    document.write("<u>Loop Counter:</u><br>");
+    let counter = 1;
+    do {
+      document.write(`Loop counter: ${counter}<br>`);
+      counter++;
+    } while (counter <= myNum);
+    document.write("<br>");
+
+    // Display the array values in a readable format
+    const subjects = ["Accounting", "Algebra", "Programming", "Art", "Data Analytics"];
+
+    document.write("<u>Array values in readable format:</u><br>");
+    subjects.forEach(subject => {
+      document.write(`${subject}<br>`);
+    });
+    document.write("<br>");
+
+    // Display the array values using one statement
+    document.write("<u>Array values separated by commas using one statement:</u><br>");
+    const subjectsAsString = subjects.join(", ");
+    document.write(subjectsAsString);
+  </script>
+</body>
+</html>
